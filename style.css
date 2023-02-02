@@ -34,10 +34,10 @@ body {
     align-self: center;
     /* padding: 1%; */
     /* max-width: 80%; */
-    font-size: 5vh;
+    font-size: 4vh;
     text-align: center;
     /* white-space: nowrap; */
-    font-weight: 800;
+    font-weight: 700;
     /* background-color: black; */
     color: white;
     transition:all 0.2s;
@@ -47,6 +47,12 @@ body {
        1px -1px 0 #000,
        -1px 1px 0 #000,
         1px 1px 0 #000;
+}
+
+.title {
+    font-size: 5vh;
+    font-weight: 1000;
+    margin-bottom: 1vh;
 }
 
 .tt {
@@ -70,6 +76,10 @@ body {
     font-size: 4vh;
     gap: 3vh;
     /* background-color: black; */
+}
+
+.result {
+    text-align: center;
 }
 
 .title:hover,
