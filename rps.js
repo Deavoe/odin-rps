@@ -18,24 +18,27 @@ let ties = 0
 let round = 1
 
 function endGame() {
-  
+
 }
 
 function updateScore() {
-  let title = document.querySelector(".title"); // score
-  let score = document.querySelector(".score"); // rounds
-  let cpu = document.querySelector(".cput");
-  let plr = document.querySelector(".plrt");
+  const title = document.querySelector(".title"); // score
+  const score = document.querySelector(".score"); // rounds
+  const cpu = document.querySelector(".cput");
+  const plr = document.querySelector(".plrt");
 
   title.textContent = "Score: " + ps + " - " + cps
   score.textContent = "Round " + round
 
   if (ps > cps) {
-    
+      plr.classList.add("winning")
+      cpu.classList.remove("winning")
     } else if (cps > ps) {
-    
+      cpu.classList.add("winning")
+      plr.classList.remove("winning")
     } else if (cps === ps) {
-   
+      plr.classList.remove("winning")
+      cpu.classList.remove("winning")
     }
 
   if (round >= 5) {
@@ -59,7 +62,7 @@ function clickHandler(e) {
 document.querySelectorAll("button").forEach((el) => el.addEventListener("click",clickHandler));
 
 function announce(str) {
-  if (typeof str !== "string" || typeof bool !== "boolean" ) {
+  if (typeof str !== "string" ) {
     return "ERROR - Announcement requires a string and boolean."
   }
  let element = document.querySelector(".result");
@@ -81,10 +84,11 @@ function rps(player, cpu) {
     announce("You lose. " + cp.replace(cp[0],cp[0].toUpperCase())  + " beats " + plr.replace(plr[0],plr[0].toUpperCase()) + ".")
   } else if (plr === cp) {  
     ++ties
-    announce("Tie.")
+    announce("Tie. Total Ties: " + ties)
   } else {
     announce("Invalid inputs.")
   }
+  return round
  }
 }
 
@@ -100,9 +104,9 @@ function game(playerSelection) {
         //     }
         // }
         const computerSelection = getComputerChoice();
+        console.log(rps(playerSelection, computerSelection));
         ++round
         updateScore()
-        // console.log(rps(playerSelection, computerSelection));
    // }
 
     // if (ps > cps) {

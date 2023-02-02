@@ -65,6 +65,9 @@ body {
       -webkit-text-stroke: 1px rgb(55,55,55);
       -webkit-text-fill-color: rgb(255,255,255);
     }
+    .winning {
+        -webkit-text-fill-color: rgb(66,255,66);
+    }
 }
 
 .content {
@@ -92,8 +95,12 @@ body {
 
 .icon,
 .move {
+    font-size: 6.5vh;
+    transition:all 0.16s;
+}
+
+.winning {
     font-size: 7vh;
-    transition:all 0.2s;
 }
 
 .buttons {
