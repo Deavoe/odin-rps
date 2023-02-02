@@ -27,7 +27,7 @@ function rps(player, cpu) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+   // for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Input rock, paper, or scissors - spell it exact.") // "rock"; // testing
         while (typeof playerSelection !== "string" || (playerSelection.toLowerCase() !== "rock" && playerSelection.toLowerCase() !== "paper" && playerSelection.toLowerCase() !== "scissors")) {
             playerSelection = prompt("Input rock, paper, or scissors - spell it exact.")
@@ -39,7 +39,7 @@ function game() {
         }
         const computerSelection = getComputerChoice();
         console.log(rps(playerSelection, computerSelection));
-    }
+   // }
     if (ps > cps) {
     alert("You win! Score: " + ps + " - " + cps + " | Ties: " + ties )
     } else if (cps > ps) {
@@ -48,4 +48,4 @@ function game() {
     alert("Draw. Score: " + ps + " - " + cps + " | Ties: " + ties )
     }
 }
-game()
+// 🪨 ✂️ 📰
