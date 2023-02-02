@@ -1,9 +1,22 @@
 body {
+    transition: background-color 0.15s;
     background-color: rgb(255,255,211);
     /* background-color: rgb(255,111,111); */
     /* background-color: rgb(111,255,111); */
     overflow:hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wt {
+    /* transition: all 0.5s; */
+    /* background-color: rgb(255,111,111); */
+    background-color: rgb(111,255,111);
+}
+
+.lt {
+    /* transition: all 0.5s; */
+    background-color: rgb(255,111,111);
+    /* background-color: rgb(111,255,111); */
 }
 
 @-moz-keyframes spin { 
@@ -41,6 +54,7 @@ body {
     /* background-color: black; */
     color: white;
     transition:all 0.2s;
+    margin-bottom: 1vh;
     text-shadow:
         2px 2px 0 #000,
       -1px -1px 0 #000,  
@@ -52,7 +66,6 @@ body {
 .title {
     font-size: 5vh;
     font-weight: 1000;
-    margin-bottom: 1vh;
 }
 
 .tt {
@@ -95,12 +108,12 @@ body {
 
 .icon,
 .move {
-    font-size: 6.5vh;
+    font-size: 6.475vh;
     transition:all 0.16s;
 }
 
 .winning {
-    font-size: 7vh;
+    font-size: 6.7vh;
 }
 
 .buttons {
@@ -108,14 +121,14 @@ body {
     display:flex;
     justify-content: center;
     /* align-items: center; */
-    gap: 3.5vw;
+    gap: 3.3vw;
     /* background-color: black; */
 }
 button {
     /* flex: 0.2; */
     /* width: 25%; */
     /* height: 0; */
-    padding: 5%;
+    padding: 6.75% 4.25%;
     font-size:100%;
     font-weight: 700;
     text-align: center;
@@ -154,4 +167,22 @@ button:active {
 
 .scissors {
     background-color: rgb(245,245,245);
+}
+
+.End {
+    transition: all .5s;
+    padding: 0;
+    font-size: 0;
+    border: none;
+}
+
+.Grow {
+    transition: all .5s;
+    scale: 1.5;
+    margin-top: 2vh;
+}
+
+.Shrink {
+    transition: all .5s;
+    scale: 0;
 }
